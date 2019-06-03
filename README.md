@@ -20,6 +20,15 @@ Additionally models in STEP format for the boards and motors were downloaded fro
 
 <img src="https://github.com/AidanC22/GearDemo/blob/master/media/assembled-bottom.png" width="300">
 
+# 3D Printed Parts
+The parts were sliced using Prusa Slic3r:
+
+<img src="https://github.com/AidanC22/GearDemo/blob/master/media/3d-print-slicer.png" width="300">
+
+They were then printed on a Prusa I3 MK3S in orange PETG plastic:
+
+<img src="https://github.com/AidanC22/GearDemo/blob/master/media/printing.jpg" width="300">
+
 # Arduino Configuration
 This project uses the following hardware from Pololu:
  * A-Star 32U4 Prime SV
