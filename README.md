@@ -7,6 +7,19 @@ This project is a demonstration of the following:
  * Controlling the TIC T825 using an Arduino board
  * Programming the Arduino microprocessor over I2C
 
+# CAD Models
+The CAD models for the housing and gears were created in Fusion 360:
+
+<img src="https://github.com/AidanC22/GearDemo/blob/master/media/housing.png" width="300">
+
+<img src="https://github.com/AidanC22/GearDemo/blob/master/media/gear.png" width="300">
+
+<img src="https://github.com/AidanC22/GearDemo/blob/master/media/assembled-top.png" width="300">
+
+Additionally models in STEP format for the boards and motors were downloaded from the Pololu and McMaster websites:
+
+<img src="https://github.com/AidanC22/GearDemo/blob/master/media/assembled-bottom.png" width="300">
+
 # Arduino Configuration
 This project uses the following hardware from Pololu:
  * A-Star 32U4 Prime SV
