@@ -15,12 +15,11 @@ void setup()
   // Set up I2C.
   Wire.begin();
 
-  //Setup push button pin.
-  
+  // Setup push button pin.
   pinMode(7, INPUT_PULLUP);
 
   // Give the Tic some time to start up.
-  delay(20);
+  delay(2000);
 
   // Configure the Tic
   tic.setProduct(TicProduct::T825);
