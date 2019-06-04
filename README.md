@@ -69,3 +69,20 @@ Programming the software requires:
  1. Install Arduino IDE 1.6.4 or newer
  2. Follow the instructions at https://www.pololu.com/docs/0J61/6.2 to add the Pololu boards to Arduino IDE
  3. Follow the Software instructions at https://github.com/pololu/tic-arduino to add the Tic library to the Arduino IDE
+
+# Tic Programming
+The Pololu Tic library contains some examples to move stepper motors. The following is needed to get the Tic library working:
+ 1. Add `#include <Tic.h>` to include the Tic header file.
+ 2. Enter `TicI2C tic;` to declare an instance of the TicI2C manager called tic.
+ 3. In the setup function call `Wire.begin();` to set up the I2C communications.
+ 4. Sleep for 20 milliseconds to give the Tic board time to power up.
+ 5. Send commands to the Tic controller using the functions in the tic instance.
+
+The `tic.resetCommandTimeout();` function must be called many times a second to prevent the Tic board from shutting down.
+
+# Push Button Programming
+The push button is connected to the A-Star Digital Pin 7. To detect the push button:
+ 1. Add `pinMode(7, INPUT_PULLUP);` to the start function.
+ 2. Read the pin using `digitalRead(7);`
+
+How this works is that configuring the pin for `INPUT_PULLUP` makes it an input-pin that can be read, but also weakly pulls the pin voltage up to 5V. When the button is released the pull-up will bring the pin to 5V and `digitalRead(7)` will return `HIGH`. When the button is pressed, pin 7 is connected through the push-button to ground draining the voltage to 0V and `digitalRead(7)` will return `LOW`.
