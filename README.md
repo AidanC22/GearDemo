@@ -34,6 +34,37 @@ This project uses the following hardware from Pololu:
  * A-Star 32U4 Prime SV
  * Tic T825 Stepper Motor Controller
 
+The electrical components are wired as follows:
+ * 24V power brick:
+   * 24V Power wire (Red) to:
+     * A-Star 32U4 Prime SV "Power In +" pin
+     * Pololu Tic T825 "VIN" pin
+   * Ground wire (Black) to:
+     * A-Star 32U4 Prime SV "Power In -" pin
+     * Ground to Pololu Tic T825 "GND" pin
+ * I2C Connection
+   * SCL wire (Orange):
+     * A-Star 32U4 Prime SV "SCL" pin
+     * Pololu Tic T825 "SCL" pin
+   * SDA wire (Yellow):
+     * A-Star 32U4 Prime SV "SDA" pin
+     * Pololu Tic T825 "SDA" pin
+   * GND wire (Green):
+     * A-Star 32U4 Prime SV "GND" pin
+     * Pololu Tic T825 "GND" pin
+ * Push Button:
+   * GND wire (black):
+     * A-Star 32U4 Prime SV "GND" pin
+     * One side of push button
+   * Signal wire (purple)
+     * Other side of push button
+     * A-Star 32U4 Prime SV "Digital Pin 7" pin
+ * Stepper Motor
+   * Coil A1 (Black) to Pololu Tic T825 "A1" pin
+   * Coil A2 (Green) to Pololu Tic T825 "A2" pin
+   * Coil B1 (Blue) to Pololu Tic T824 "B1" pin
+   * Coil B2 (Red) to Pololu Tic T825 "B2" pin
+   
 Programming the software requires:
  1. Install Arduino IDE 1.6.4 or newer
  2. Follow the instructions at https://www.pololu.com/docs/0J61/6.2 to add the Pololu boards to Arduino IDE
