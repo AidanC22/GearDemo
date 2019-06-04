@@ -80,6 +80,19 @@ The Pololu Tic library contains some examples to move stepper motors. The follow
 
 The `tic.resetCommandTimeout();` function must be called many times a second to prevent the Tic board from shutting down.
 
+# Tic Configuration
+The following commands configure the Tic T825 to smoothly drive the NEMA 17 motor:
+ * `tic.setProduct(TicProduct::T825);` to set the board type to Tic T825
+ * `tic.setStepMode(TicStepMode::Microstep32);` to set the microstep resolution to 32 microsteps per step
+ * `tic.setCurrentLimit(500);` to set the motor current to 500 milli-amps
+ * `tic.setDecayMode(TicDecayMode::Fast);` to set the motor decay mode to fast (less vibration)
+ * `tic.setMaxSpeed(64000000);` to set the top speed to 6400 microsteps per second
+ * `tic.setMaxAccel(640000);` to set the acceleration to 6400 microsteps per second squared
+ * `tic.setMaxDecel(640000);` to set the deceleration to 6400 microsteps per second squared
+
+The stepper motor drive values were found out by experimentation.
+The speed and acceleration values are due to the 200-step-motor * 32-micro-steps-per-step resulting in 6400 micro-steps per revolution.
+
 # Push Button Programming
 The push button is connected to the A-Star Digital Pin 7. To detect the push button:
  1. Add `pinMode(7, INPUT_PULLUP);` to the start function.
